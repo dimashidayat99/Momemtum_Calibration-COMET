@@ -1,6 +1,4 @@
-*.swk
-*.swl
-*.swm
-*.swn
-*.swo
-*.swp
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
