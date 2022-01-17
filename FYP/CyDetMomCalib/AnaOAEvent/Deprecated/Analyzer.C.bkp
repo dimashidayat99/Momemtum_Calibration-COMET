@@ -1,0 +1,161 @@
+#include "ICTHGeom.hxx"
+
+void Analyzer(TString inFileName, TString outFileName) {
+
+  using namespace std;
+  using namespace COMET;
+
+  bool debug = false;
+
+  TStopwatch* timer = new TStopwatch();
+  timer->Start();
+ 
+  TGeoManager::Import(inFileName);
+  cout << IGeomInfo::CTH().GetNumberOfModules()  << endl;
+  cout << IGeomInfo::CTH().GetNumberOfCounters() << endl;
+  cout << IGeomInfo::CTH().GetNumberOfLayers()   << endl;
+  cout << IGeomInfo::CTH().GetNumberOfSegments() << endl;
+  
+  //
+  // Open input file and retrieve the COMETEvents TTree
+  //
+  TFile* inFile = TFile::Open(inFileName); 
+  TTree* inTree = (TTree*)inFile->Get("COMETEvents");
+
+  //================================
+  //
+  //
+  //
+  //
+  //================================
+  ICOMETEvent* event = nullptr; // declare event pointer
+  inTree->SetBranchAddress("COMETEvent", &event); // set the branch address to the pointer 
+
+  IHandle<IG4TrajectoryContainer> g4Tracks(nullptr);
+  IHandle<IG4HitContainer> g4HitsCDC(nullptr);
+  IHandle<IG4HitContainer> g4HitsCTH(nullptr);
+  IHandle<IHitSelection>   mcHitsCDC(nullptr);
+
+
+  //================================
+  //
+  // Initialize histograms
+  //
+  //================================
+  // TH1D* h;
+
+  
+  //================================
+  //
+  //
+  // EVENT LOOP
+  //
+  //
+  //================================
+
+  unsigned int nEntries = inTree->GetEntries();
+
+  if (debug){
+    int maxEntries = 50000;
+    if (nEntries > maxEntries) nEntries = maxEntries;
+    cout << "DEBUG: set nEntries to " << nEntries << endl; 
+  }
+
+  cout << "Looping over tree with " << nEntries << endl; 
+  for (size_t i=0; i<nEntries; ++i){
+    inTree->GetEntry(i);
+    if (i%10000 == 0){
+      std::cout << "Event: "<< i << "/" << nEntries<< std::endl;
+    }
+
+    //================================
+    //
+    //
+    //
+    //
+    //================================
+
+    g4Tracks = event->Get<IG4TrajectoryContainer>("truth/G4Trajectories");
+    if (g4Tracks){      
+      TLorentzVector tlv;
+      int pointIndex = 0;// Start from 0 here
+      // if (g4Tracks->size() > 0){
+      //   std::cout << "\n" << std::endl;
+      //   std::cout << "Event: "<< i << "/" << nEntries<< std::endl;
+      // }
+
+      bool hasPiMinusPrimary = false;
+      bool hasGamma = false;
+      bool hasPositron = false;
+
+
+      // IHandle<IG4Trajectory> track_gamma(nullptr);
+
+
+      for (auto& trackMap: *g4Tracks){
+        auto& track = trackMap.second;
+        //
+        //
+        //
+        if (TString(track.GetProcessName()).Contains("primary") && TString(track.GetParticleName()).Contains("pi-")){
+          hasPiMinusPrimary = true;
+        }
+        //
+        //
+        //
+        // if (TString(track.GetParticleName()).Contains("gamma")){
+        //   hasGamma = true;
+        // }
+        // if (TString(track.GetParticleName()).Contains("gamma") && TString(track.GetProcessName()).Contains("Decay")){
+        //   hasGamma = true;
+        // }
+        // if (TString(track.GetParticleName()).Contains("gamma") && TString(track.GetProcessName()).Contains("pi-Inelastic")){
+        //   hasGamma = true;
+        // }
+        hasGamma=true;
+        //
+        //
+        //
+        // if (TString(track.GetParticleName()).Contains("e+")){
+        //   auto parentTrack = g4Tracks->GetTrajectory(track.GetParentId());
+        //   bool parentIsGamma = false;
+        //   if (parentTrack){
+        //     parentIsGamma = TString(parentTrack->GetParticleName()).Contains("gamma");
+        //   }
+        //   if (parentTrack && parentIsGamma){
+        //     hasPositron = true;
+        //   }
+        // }
+        //
+        //
+        //
+        if (TString(track.GetParticleName()).Contains("e+") && ((track.GetInitialMomentum().E()/unit::MeV)>10.)){
+          auto parentTrack = g4Tracks->GetTrajectory(track.GetParentId());
+          if (parentTrack){
+            hasPositron = true;
+          }
+        }
+
+        if(hasPiMinusPrimary && hasGamma && hasPositron) break;
+      }
+
+      if (hasPiMinusPrimary && hasGamma && hasPositron){
+        std::cout << "\n" << std::endl;
+        std::cout << "Event: "<< i << "/" << nEntries<< std::endl;
+        for (auto& trackMap: *g4Tracks){
+          auto& track = trackMap.second;
+          // if (TString(track.GetParticleName()).Contains("gamma") && ((track.GetInitialMomentum().E()/unit::MeV)>10.)){
+          //   std::cout << track.GetTrackId()  << "|" << track.GetParticleName() << " | " << track.GetInitialMomentum().E() / unit::MeV << " | " << track.GetParentId() << "|" << track.GetProcessName()  << std::endl;
+          // }
+          std::cout << track.GetTrackId()  << "|" << track.GetParticleName() << " | " << track.GetInitialMomentum().E() / unit::MeV << " | " << track.GetParentId() << "|" << track.GetProcessName()  << std::endl;
+        }
+      }
+    }
+  }
+  cout << "End of event loop" << endl; 
+
+  inFile->Close();
+  timer->Stop();
+  timer->Print();
+
+}
