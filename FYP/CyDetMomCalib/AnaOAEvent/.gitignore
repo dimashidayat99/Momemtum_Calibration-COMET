@@ -2,4 +2,4 @@
 **.pyc
 TempSampleLists/*_part*.txt
 plots_*
-*.swp
+.*
