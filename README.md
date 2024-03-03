@@ -84,6 +84,153 @@ The simulation of this study is based on the PPC process flow as discussed befor
 
 # Result
 
+## Default Configuration
+
+There are total 7 simulations were run in this study: 1 simulation was done by using default configuration, 4 simulation were done by using hydrocarbon target configuration and two simulation were done by using pion gun configuration. The output of the 7 simulations then was extracted for the number of event of involving particle in PPC process, momentum and vertex position distribution for pair production was created.
 
 
+For given current configuration of the COMET experiment, from 990678399 POT, there
+are only 12 electron-positron pair that is produced from PPC process as shown in Table 4.1.
+As expected, the pair production from PPC process is suppressed by the design of COMET
+experiment itself. This is because the electron pair production from PPC process is also
+one of the background event that is related with the pion capture process. To perform
+the momentum calibration, the distribution of momentum for electron and positron pair
+from PPC process is needed. With only 12 events, the distribution of momentum will be imperfect and have high statistical error. Some strategy is needed to increase the statistics
+of pair production.
 
+## Hydrocarbon Target Configuration
+
+The low statistics from simulation before must be improve in order to reduce the
+statistical uncertainty when generating the momentum distribution. The strategy that is
+used for this study to increase the statistics of pair production from PPC process is to change
+muon stopping target material from aluminium to the hydrocarbon based material. In
+principle, the PPC process require interaction of pion and proton to occur. Therefore, more
+pions will interact with proton if there are more number of proton of the stopping target. For
+this reason, the material with rich proton number will be used. Therefore, the hydrocarbon
+material is chosen in this study. The chosen hydrocarbon material must be available
+in the ICEDUST package, the available material chosen is polystyrene, polyethylene,
+polypropylene and polyvinyl toluene
+
+
+Compared with all the hydrocarbon based material target, I found that the highest
+number of pair production from PPC process is 85 events by using polyethylene material
+target. The statistics is increase by factor of 7 from 12 events for aluminium target to 85
+events for polyethylene target. The reason why polyethylene target produce highest number
+of events compared to other hydrocarbon material such as polystyrene, polypropylene and
+polyvinyl toluene is not fully understand yet and require more time for understanding about
+the molecular structure of hydrocarbon material. However, the 85 pair production also not
+enough to produce good momentum distribution, so that another strategy must be used to
+increase the statistics.
+
+## Pion Gun Configuration
+
+The momentum calibration study utilize the pion gun configuration (negatively charge
+pion gun) to increase the statistics. The pion gun was used to fire the pion directly to the
+material target in CyDet. Using this technique, the number of pions that initiate the PPC
+process will increase. Obviously, the pion gun configuration will produce significantly
+more pair production compare to the original configuration of the experiment, where the
+pion is produced by bombarding the proton to the pion production target.
+
+By using pion gun configuration, the pair production from PPC process is increase
+drastically by factor of 511, from 12 events to 6127 events for
+aluminium target. While the using polyethylene, the pair production from PPC process
+is also increase drastically by factor of 2484, from 85 events to 21178 events. Due to the sufficiently high of number of samples, the momentum distributions
+for the pair production were created
+
+## Vertex Position of Pair Production
+
+In this study, the analysis was done only at truth level which refer to real physics
+simulation and not realistic compared to the SimDetectorResponse. Therefore, momentum
+distribution of pair production does not show where exactly the electron and positron pair
+is produced in CyDet. Therefore, the vertex of the pair production was plotted by using
+electron-positron pair initial position with implemented the main algorithm as mention in
+chapter 3. The initial position of electron-positron pair (vertex) was plotted for transverse
+distance from z-axis at the z coordinate. The diagram of schematic layout of CDC in
+Figure 2.13 with the vertex position as shown Figure 4.2. I found that the CDC is denoted
+by rectangular shape that is located at 496 mm to 835 mm of transverse distance from
+z-axis while the radius of the CDC is in between 835 mm to 496 mm. In order for electron
+and positron leave the hits in CDC, the vertex must be produced inside the CDC radius
+which optimally at 200 mm to 400 mm. If the vertex is produced inside the CDC radius,
+the electron and positron will move toward the CDC resulting in increasing probability of
+electron and positron leave the hits in CDC. If the vertex is produced outside the CDC radius, the electron and positron will move far from CDC and never leave the hits in the
+CDC.
+
+![]()
+
+In Figure 4.2, there is no number of vertex is shown. Therefore, to observe how many
+vertex is produce at particular transverse distance from z-axis, the distribution of number of
+vertex against the transverse distance from z-axis is plotted as shown in Figure 4.3. Using
+this figure, the number of pair production vertex produced in CyDet can be estimated.
+By looking to the distribution of vertex in Figure 4.3, Most of the pair production vertex
+is produced outside the CDC radius while around 25% of the pair production vertex is
+produced inside the CDC radius (Noted that the CDC radius is at around 835 mm to 496
+mm from the z-axis). From this observation, it simply said that only around 25% of total of
+the pair production vertex can be detected because only around 25% vertex that produced
+inside the CDC radius will leave the hits in CDC. The position of pair production vertex
+is important in this study to know if the pair production from PPC process is detectable
+or not. Although most of the pair production vertex is outside the CDC radius, the pair production from PPC process is still visible and detectable by the CDC. Imagine if all of
+the pair production is produced outside the CDC radius, there will be no signal is produced
+for this process and there is no point to continue this study if this (vertex production is
+outside CDC radius) is happening.
+
+![]
+
+## Event Estimation for Calibration Run of COMMET Experiment for Currrent Configuration
+
+From the simulation result for current configuration, some analysis and event estimation
+for the calibration run can be calculated. In phase-I, the COMET experiment is expected
+to run for 146 days which equivalent to 1.26 × 107
+second and expected to have total POT
+of 3.2 × 1019. From this information, the rate of POT per second is given by
+
+... Equation
+
+From Table 4.1, the number of pair production from PPC process with respect to POT
+is 1.2 × 10−8 per second. From this value, the rate of the pair production is given by rate of POT times the number of pair production with respect to POT
+
+... Equation
+
+The rate of pair production from PPC process was calculated to be 30476 per second.
+The 30476 pair production per second will tell us on how long the beam and the detector
+should be run for calibration run. The idea is to run beam and detector until the statistical
+uncertainty is greatly reduce. As known, the more the statistics, the less the uncertainty.
+From the momentum distribution at Figure 4.1 which have number of events of 21178, I
+will say that around 20000 and above specifically around 50000 is good enough to reduce
+the uncertainty. But this assumption is still early to make. The rate of pair production of
+30476 is actually quite high for COMET experiment because of COMET experiment is
+design to suppressed the background events until the very small number of background
+events is expected to observed. The high number of rate of pair production is because
+of the calculation is naive estimation that based on many assumption such as not taking
+account the acceptance. For more complex analysis the acceptance and efficiency must
+be included in the analysis. The event estimation for calibration run require advanced
+understanding on the detector and more strategy increase the samples for the calibration
+run.
+
+# Summary
+
+The momentum calibration study in COMET experiment has been performed until the
+estimation of vertex of pair production position of PPC process in CyDet for simulation
+analysis and events estimation of pair production of PPC process for the calibration run for
+given current cpnfiguration. Although, there is no momentum calibration is done in this
+study, some of the objective of this study is achieved by successfully observed the visibility
+of PPC process in the CDC in CyDet. The calibration study require more complex analysis
+to become realistic enough to ensure the momentum calibration can be done in calibration
+run before the data taking of the COMET phase-I run. My suggestion for the future study is
+to put some thin layer material inside the CDC radius around 200 mm from z-axis as shown
+in Figure 5.1. It is because in principle, the photon must be near to a nucleus in order for
+photon conversion process to occur because of the conservation of the momentum and
+energy is satisfy. The photon conversion cannot occur in free space because of momentum
+and energy conservation cannot be satisfy. By putting some cylindrical material inside
+CDC radius, the probability of photon conversion will be increase and produce significant
+samples of pair production from PPC process. For the calibration run, the analysis of
+the event estimation of PPC process must include the acceptance and efficiency. My
+suggestion for calibration run is not to use the momentum cut (momentum window) only for
+calibration run. From the momentum distribution that is shown in Figure 4.1, the number
+of electron that have momentum near 100 MeV/c is very low. Based on the average, most
+of the electron have momentum around 40 to 60 MeV/c. Therefore, to make observable
+event, the momentum window of 103.6 MeV/c < 푝푒 < 106.0 MeV/c should not be used
+in the calibration run. More advanced approaches may be implemented to improve the
+studies by a higher extend since the current study is only at truth level. More research and
+improvisations are required in the momentum calibration study.
+
+![]()
