@@ -7,7 +7,6 @@
     <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F00%2FStandard_Model_of_Elementary_Particles.svg&tbnid=P8QhfKkjydp_QM&vet=12ahUKEwjCjfbSuNqEAxXMUGwGHZSnAkMQMygAegQIARBK..i&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStandard_Model&docid=7RVBQ4xyx2vmTM&w=1390&h=1330&itg=1&q=standard%20model&ved=2ahUKEwjCjfbSuNqEAxXMUGwGHZSnAkMQMygAegQIARBK">Figure source.</a>
 </p>
 
-
 The Standard Model (SM) of particle physics is excellent theory that explain the basic building blocks of the universe. It explains how the quarks and leptons build all known matter. In addition, it describes how three of four known fundamental forces (electromagnetic force, strong force and weak force and except for gravity) work by exchange of force-carrier particles known as boson. The biggest success of the SM is the prediction of Higgs boson which then experimentally observed at Large Hadron Collider in 2012. The Higgs boson is the last particle predicted in SM meaning there is no other particle is predicted by SM in the future. For a decade, through many experiment the SM become establish as a well-tested physics theory. However, the SM still far be considered as a complete model since it unable to solve some problems in particle physics such as hierarchy problem between the Planck scale of gravity and electroweak scale, the quantization of gravity, fine tuning of certain SM parameter and more. Other than that, SM also unable to predict some physical phenomena in particle physics such as neutrino oscillation which resulting in Lepton Flavor Violation (LFV) that can induce Charged
 Lepton Flavor Violation (CLFV) process which is shown in figure below.
 
@@ -90,6 +89,9 @@ The interest process in the calibration study is pion capture process specifical
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/ppc.png"  width="500"/>
 </p>
+<p align="middle">
+    <em>Pionic pion capture process.</em>
+</p>
 
 ### Data Samples
 
@@ -129,6 +131,9 @@ For given current configuration of the COMET experiment, from 990678399 POT, the
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png"  width="500"/>
 </p>
+<p align="middle">
+    <em>PPC event counts for default configuration.</em>
+</p>
 
 ## Hydrocarbon Target Configuration
 
@@ -136,12 +141,24 @@ The low statistics from simulation before must be improve in order to reduce the
 
 <p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyethylene_conf.png" width="500" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polypropylene_conf.png" width ="500" /> 
+    <p align="middle">
+    <em>PPC event counts for polyethylene configuration</em>
+    </p>
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polypropylene_conf.png" width ="500" />
+    <p align="middle">
+    <em>PPC event counts for polypropylene configuration.</em>
+    </p>
 </p>
 
 <p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polystyrene_conf.png" width="500" />
+    <p align="middle">
+    <em>PPC event counts for polystyrene configuration.</em>
+    </p>
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyvinyltoluene_conf.png" width="500" /> 
+    <p align="middle">
+    <em>PPC event counts for polyvinyltoluene configuration.</em>
+    </p>
 </p>
 
 Compared with all the hydrocarbon based material target, It was found that the highest number of pair production from PPC process is 85 events by using polyethylene material target. The statistics is increase by factor of 7 from 12 events for [aluminium](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png) target to 85 events for [polyethylene](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyethylene_conf.png) target. The reason why polyethylene target produce highest number of events compared to other hydrocarbon material such as polystyrene, polypropylene and polyvinyl toluene is not fully understand yet and require more time for understanding about the molecular structure of hydrocarbon material. However, the 85 pair production also not enough to produce good momentum distribution, so that another strategy must be used to increase the statistics.
@@ -152,14 +169,26 @@ The momentum calibration study utilize the pion gun configuration (negatively ch
 
 <p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_default_conf.png" width="500" />
+    <p align="middle">
+    <em>PPC event counts for pi gun and aluminium target (default) configuration.</em>
+    </p>
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_polyethylene_conf.png" width="500" /> 
+    <p align="middle">
+    <em>PPC event counts for pi gun and polyethylene configuration.</em>
+    </p>
 </p>
 
 By using pion gun configuration, the pair production from PPC process is increase drastically by factor of 511, from 12 events to 6127 events for aluminium target (left figure). While the using polyethylene, the pair production from PPC process is also increase drastically by factor of 2484, from 85 events to 21178 events (right figure). Due to the sufficiently high of number of samples, the momentum distributions for the pair production were created.
 
 <p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_electron_mom.png" width="500" />
+    <p align="middle">
+    <em>Momentum distribution of electron.</em>
+    </p>
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_positron_mom.png" width="500" /> 
+    <p align="middle">
+    <em>Momentum distribution of positron.</em>
+    </p>
 </p>
 
 
@@ -170,11 +199,17 @@ In this study, the analysis was done only at truth level which refer to real phy
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h2_gamma_decayvtx_rz.png" width="600" />
 </p>
+<p align="middle">
+    <em>Vertex position in the CyDet for transverse distance from z-axis against z coordinate.</em>
+</p>
 
 In figure above, there is no number of vertex is shown. Therefore, to observe how many vertex is produce at particular transverse distance from z-axis, the distribution of number of vertex against the transverse distance from z-axis is plotted as shown in figure below. Using this figure, the number of pair production vertex produced in CyDet can be estimated. By looking to the distribution of vertex in figure below, Most of the pair production vertex is produced outside the CDC radius while around 25% of the pair production vertex is produced inside the CDC radius (Noted that the CDC radius is at around 835 mm to 496 mm from the z-axis). From this observation, it simply said that only around 25% of total of the pair production vertex can be detected because only around 25% vertex that produced inside the CDC radius will leave the hits in CDC. The position of pair production vertex is important in this study to know if the pair production from PPC process is detectable or not. Although most of the pair production vertex is outside the CDC radius, the pair production from PPC process is still visible and detectable by the CDC. Imagine if all of the pair production is produced outside the CDC radius, there will be no signal is produced for this process and there is no point to continue this study if this (vertex production is outside CDC radius) is happening.
 
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h_gamma_decayvtx_r.png" width="600" />
+</p>
+<p align="middle">
+    <em> Number of vertex produce at particular transverse distance from z-axis.</em>
 </p>
 
 ## Event Estimation for Calibration Run of COMMET Experiment for Currrent Configuration
@@ -195,4 +230,7 @@ The momentum calibration study in COMET experiment has been performed until the 
 
 <p align="middle">
 <img src ="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/suggestion.png" width="600" />
+</p>
+<p align="middle">
+    <em> Proposed cylindrical thin material inside CDC around 200 mm from z-axis to increase the probability of photon conversion process.</em>
 </p>
