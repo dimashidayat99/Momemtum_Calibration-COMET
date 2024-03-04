@@ -21,6 +21,9 @@ The existence of a more complete theoretical models than the SM known as New Phy
 
 $$ \beta(\mu \rightarrow e\gamma) \approx O(10^{-54}) $$
 
+
+The COMET experiment is the one of the future experiment that seek for CLFV process in muonic channel of neutrino-less muon to electron conversion. Due to the rarity of CLFV process to occur, the COMET must be designed to suppressed all the possible background to get accurate data. The accuracy of the data can be increase by calibrating the detector before taking the data, this can help to reduce the uncertainty by reducing the error that may come from various source such as detector error. The objective of this study is to study pion capture process for the momentum calibration by observing the detectability of pion capture process in the detector in COMET experiment. It is crucial to check the detectability of the interest process to know if this process is possible to be used for calibration. If pion capture process is detectable, the study will continue to the calibration measurement. In addition, the study also need to estimate and analyse the pion capture process for the calibration run.
+
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_layout.png" width ="800" /> 
 </p>
@@ -28,8 +31,6 @@ $$ \beta(\mu \rightarrow e\gamma) \approx O(10^{-54}) $$
     <em>The COMET experiment schematic layout.</em>
 <a href = "https://doi.org/10.1093/ptep/pts089">Figure source.</a>
 </p>
-
-The COMET experiment is the one of the future experiment that seek for CLFV process in muonic channel of neutrino-less muon to electron conversion. Due to the rarity of CLFV process to occur, the COMET must be designed to suppressed all the possible background to get accurate data. The accuracy of the data can be increase by calibrating the detector before taking the data, this can help to reduce the uncertainty by reducing the error that may come from various source such as detector error. The objective of this study is to study pion capture process for the momentum calibration by observing the detectability of pion capture process in the detector in COMET experiment. It is crucial to check the detectability of the interest process to know if this process is possible to be used for calibration. If pion capture process is detectable, the study will continue to the calibration measurement. In addition, the study also need to estimate and analyse the pion capture process for the calibration run.
 
 
 # Objective
