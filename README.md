@@ -90,31 +90,31 @@ There are total 7 simulations were run in this study: 1 simulation was done by u
 
 For given current configuration of the COMET experiment, from 990678399 POT, there are only 12 electron-positron pair that is produced from PPC process. As expected, the pair production from PPC process is suppressed by the design of COMET experiment itself. This is because the electron pair production from PPC process is also one of the background event that is related with the pion capture process. To perform the momentum calibration, the distribution of momentum for electron and positron pair from PPC process is needed. With only 12 events, the distribution of momentum will be imperfect and have high statistical error. Some strategy is needed to increase the statistics of pair production.
 
-![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/default_conf.png)
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png)
 
 ## Hydrocarbon Target Configuration
 
 The low statistics from simulation before must be improve in order to reduce the statistical uncertainty when generating the momentum distribution. The strategy that is used for this study to increase the statistics of pair production from PPC process is to change muon stopping target material from aluminium to the hydrocarbon based material. In principle, the PPC process require interaction of pion and proton to occur. Therefore, more pions will interact with proton if there are more number of proton of the stopping target. For this reason, the material with rich proton number will be used. Therefore, the hydrocarbon material is chosen in this study. The chosen hydrocarbon material must be available in the ICEDUST package, the available material chosen is polystyrene, polyethylene, polypropylene and polyvinyl toluene.
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polyethylene_conf.png" width="300" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polypropylene_conf.png" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyethylene_conf.png" width="300" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polypropylene_conf.png" width ="300" /> 
 </p>
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polystyrene_conf.png" width="300" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polyvinyltoluene_conf.png" width="300" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polystyrene_conf.png" width="300" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyvinyltoluene_conf.png" width="300" /> 
 </p>
 
-Compared with all the hydrocarbon based material target, It was found that the highest number of pair production from PPC process is 85 events by using polyethylene material target. The statistics is increase by factor of 7 from 12 events for [aluminium](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/default_conf.png) target to 85 events for [polyethylene](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polyethylene_conf.png) target. The reason why polyethylene target produce highest number of events compared to other hydrocarbon material such as polystyrene, polypropylene and polyvinyl toluene is not fully understand yet and require more time for understanding about the molecular structure of hydrocarbon material. However, the 85 pair production also not enough to produce good momentum distribution, so that another strategy must be used to increase the statistics.
+Compared with all the hydrocarbon based material target, It was found that the highest number of pair production from PPC process is 85 events by using polyethylene material target. The statistics is increase by factor of 7 from 12 events for [aluminium](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png) target to 85 events for [polyethylene](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyethylene_conf.png) target. The reason why polyethylene target produce highest number of events compared to other hydrocarbon material such as polystyrene, polypropylene and polyvinyl toluene is not fully understand yet and require more time for understanding about the molecular structure of hydrocarbon material. However, the 85 pair production also not enough to produce good momentum distribution, so that another strategy must be used to increase the statistics.
 
 ## Pion Gun Configuration
 
 The momentum calibration study utilize the pion gun configuration (negatively charge pion gun) to increase the statistics. The pion gun was used to fire the pion directly to the material target in CyDet. Using this technique, the number of pions that initiate the PPC process will increase. Obviously, the pion gun configuration will produce significantly more pair production compare to the original configuration of the experiment, where the pion is produced by bombarding the proton to the pion production target.
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/pigun_default_conf.png" width="300" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/pigun_polyethylene_conf.png" width="300" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_default_conf.png" width="300" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_polyethylene_conf.png" width="300" /> 
 </p>
 
 By using pion gun configuration, the pair production from PPC process is increase drastically by factor of 511, from 12 events to 6127 events for aluminium target (left figure). While the using polyethylene, the pair production from PPC process is also increase drastically by factor of 2484, from 85 events to 21178 events (right figure). Due to the sufficiently high of number of samples, the momentum distributions for the pair production were created.
@@ -141,7 +141,7 @@ From the simulation result for current configuration, some analysis and event es
 
 $$ Rate_{POT} = \frac{3.2 \times 10^{19}}{1.26 \times 10^7 } \approx 2.5397 \times 10^{12} POT s^{-1}$$
 
-From result of [default](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/default_conf.png) configuration event count, the number of pair production from PPC process with respect to POT is $1.2 × 10^{−8}$ per second. From this value, the rate of the pair production is given by rate of POT times the number of pair production with respect to POT
+From result of [default](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png) configuration event count, the number of pair production from PPC process with respect to POT is $1.2 × 10^{−8}$ per second. From this value, the rate of the pair production is given by rate of POT times the number of pair production with respect to POT
 
 $$ Rate_{e^{+}e^{-}} = (2.5397 \times 10^{12})(1.2 \times 10^{-8}) = 30476 Pairs^{-1}$$
 
