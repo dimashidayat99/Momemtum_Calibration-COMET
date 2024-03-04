@@ -75,7 +75,12 @@ The individual Proton On Target (POT) events from SimG4 simulation is combines b
 
 ## Momentum Calibration Study Work Flow
 
-![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/WorkFlow.png)
+<p align="middle">
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/WorkFlow.png"  width="800"/>
+</p>
+<p align="middle">
+<em>Momentum calibration study work flow.</em>
+</p>
 
 The work flow in this study is to skim the pion to produce input of the simulation,
 running the simulation for current configuration. After that the simulation is rerun by
@@ -90,7 +95,7 @@ The interest process in the calibration study is pion capture process specifical
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/ppc.png"  width="500"/>
 </p>
 <p align="middle">
-    <em>Pionic pion capture process.</em>
+<em>Pionic pion capture process.</em>
 </p>
 
 ### Data Samples
@@ -144,6 +149,8 @@ The low statistics from simulation before must be improve in order to reduce the
     <p align="middle">
     <em>PPC event counts for polyethylene configuration</em>
     </p>
+</p>
+<p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polypropylene_conf.png" width ="500" />
     <p align="middle">
     <em>PPC event counts for polypropylene configuration.</em>
@@ -155,6 +162,8 @@ The low statistics from simulation before must be improve in order to reduce the
     <p align="middle">
     <em>PPC event counts for polystyrene configuration.</em>
     </p>
+</p>
+<p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyvinyltoluene_conf.png" width="500" /> 
     <p align="middle">
     <em>PPC event counts for polyvinyltoluene configuration.</em>
@@ -172,6 +181,8 @@ The momentum calibration study utilize the pion gun configuration (negatively ch
     <p align="middle">
     <em>PPC event counts for pi gun and aluminium target (default) configuration.</em>
     </p>
+</p>
+<p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_polyethylene_conf.png" width="500" /> 
     <p align="middle">
     <em>PPC event counts for pi gun and polyethylene configuration.</em>
@@ -185,6 +196,8 @@ By using pion gun configuration, the pair production from PPC process is increas
     <p align="middle">
     <em>Momentum distribution of electron.</em>
     </p>
+</p>
+<p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_positron_mom.png" width="500" /> 
     <p align="middle">
     <em>Momentum distribution of positron.</em>
