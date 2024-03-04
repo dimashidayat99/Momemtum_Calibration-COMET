@@ -1,14 +1,20 @@
 # Introduction
 
-![]()
-
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/sm.svg)
 
 The Standard Model (SM) of particle physics is excellent theory that explain the basic building blocks of the universe. It explains how the quarks and leptons build all known matter. In addition, it describes how three of four known fundamental forces (electromagnetic force, strong force and weak force and except for gravity) work by exchange of force-carrier particles known as boson. The biggest success of the SM is the prediction of Higgs boson which then experimentally observed at Large Hadron Collider in 2012. The Higgs boson is the last particle predicted in SM meaning there is no other particle is predicted by SM in the future. For a decade, through many experiment the SM become establish as a well-tested physics theory. However, the SM still far be considered as a complete model since it unable to solve some problems in particle physics such as hierarchy problem between the Planck scale of gravity and electroweak scale, the quantization of gravity, fine tuning of certain SM parameter and more. Other than that, SM also unable to predict some physical phenomena in particle physics such as neutrino oscillation which resulting in Lepton Flavor Violation (LFV) that can induce Charged
-Lepton Flavor Violation (CLFV).
+Lepton Flavor Violation (CLFV) process which is shown in figure below.
 
-![]()
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/CLFVprocess.jpg)
 
-The existence of a more complete theoretical models than the SM known as New Physics (NP) that may explain and predict some physical phenomena such as neutrino oscillation and CLFV. Originally, CLFV is not allowed in SM, however, with existance of neutrino oscillation, CLFV may occur but in extremely low probability or branching ratio which is around order of -54. Therefore, searching for CLFV process signal may give us a hint of the physics beyond the SM and some NP models may be considered as extension of the SM. The CLFV process in muonic channel have been search since the discovery of muon and still continue until now. The COMET experiment is the one of the future experiment that seek for CLFV process in muonic channel of neutrino-less muon to electron conversion. Due to the rarity of CLFV process to occur, the COMET must be designed to suppressed all the possible background to get accurate data. The accuracy of the data can be increase by calibrating the detector before taking the data, this can help to reduce the uncertainty by reducing the error that may come from various source such as detector error. The objective of this study is to study pion capture process for the momentum calibration by observing the detectability of pion capture process in the detector in COMET experiment. It is crucial to check the detectability of the interest process to know if this process is possible to be used for calibration. If pion capture process is detectable, the study will continue to the calibration measurement. In addition, the study also need to estimate and analyse the pion capture process for the calibration run.
+The existence of a more complete theoretical models than the SM known as New Physics (NP) that may explain and predict some physical phenomena such as neutrino oscillation and CLFV. Originally, CLFV is not allowed in SM, however, with existance of neutrino oscillation, CLFV may occur but in extremely low probability or branching ratio which is around order of -54. Therefore, searching for CLFV process signal may give us a hint of the physics beyond the SM and some NP models may be considered as extension of the SM. The CLFV process in muonic channel have been search since the discovery of muon and still continue until now. 
+
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/COMET%20LOGO.png)
+
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_layout.png)
+
+The COMET experiment is the one of the future experiment that seek for CLFV process in muonic channel of neutrino-less muon to electron conversion. Due to the rarity of CLFV process to occur, the COMET must be designed to suppressed all the possible background to get accurate data. The accuracy of the data can be increase by calibrating the detector before taking the data, this can help to reduce the uncertainty by reducing the error that may come from various source such as detector error. The objective of this study is to study pion capture process for the momentum calibration by observing the detectability of pion capture process in the detector in COMET experiment. It is crucial to check the detectability of the interest process to know if this process is possible to be used for calibration. If pion capture process is detectable, the study will continue to the calibration measurement. In addition, the study also need to estimate and analyse the pion capture process for the calibration run.
+
 
 # Objective
 
@@ -27,7 +33,7 @@ The momentum calibration study used Pionic Pion Capture process for calibration.
 
 The word ICEDUST is stand for Integrated COMET Experiment Data User Software Toolkit which is the COMET experiment’s official software framework. The ICEDUST has been used to handle and analyse the COMET data. In addition, it has been designed to treat the real data and simulated data in the same way by using the exact same software algorithm. The MIDAS file format where the real data is stored will be converted using the oaRawData and oaUnpack packages to create the data structures mimicked by SimDetectorResponse. Then, both real data and simulation data are calibrated, reconstructed, and analysed. The oaEvent package provide the core event structure of ICEDUST, which means that the data flow in ICEDUST is built around the oaEvent data format. The data stored in the oaEvent format are created by a hierarchical structure of objects from the TNamed class of ROOT. The geometry description is stored with the data, it can be in the form of a hash-tag pointing to a particular archived geometry that is automatically retrieved as needed or as a persisted ROOT object. The various TGeo classes is used by ROOT format that implement all geometry needs which means that all packages throughout the framework use a usual geometry description including providing an easy book-keeping mechanism.
 
-![]()
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/ICEDUST%20Framework.png)
 
 In the ICEDUST framework, there is a host of simulation packages known as Monte Carlo packages that have been incorporated into ICEDUST. These include PHITS, MARS, Fluka and Geant4 which handle the simulations of hadronic physics inside the Pion Production Target. The usual simulation chain that produce Monte Carlo data can be done by simple step. Firstly, simulate the production target. This can be done apart so that the package of different hadron production models can be used. Secondly, the particle tracking. The details of the resulting particles flux out of the pion Production Target are read into a data format which is defined by oaRooTracker package. The Geant4 plays important role here, where the SimG4 package which is the Geant4-based particle tracking will read the data and track the particles from the Pion Production Target to the detectors and creates simulated energy deposits. Then, data from many events was combined into one event by using the SimHitMerger. Finally, The Rare process selection. To study the rare process or background signal since they are rare, the SimHitMerger is used to merge hits from rare process together to artificially increase the statistics.
 
@@ -36,13 +42,13 @@ In the ICEDUST framework, there is a host of simulation packages known as Monte 
 
 The simulation begins with the propagation of 8 GeV protons beam which produce proton through proton beam line that feeds COMET experiment by using the TURTLE software framework. The results of this simulation are sampled just as the protons enter the Pion Production section and saved in an oaRooTracker file.This simulation has been done by the collaboration. For calibration study, the Geant 4 based simulation is run where the oaRooTracker file is used as input for the simulation. The SimG4 read the description from the oaRooTracker files to continue the simulation. The simulation is done in full by Geant4 through the Muon Transport section and into the detector section. The hits produced in SimG4 describe the time and magnitude of all energy deposits in the detectors. They are referred to as "truth" hits.
 
-![]()
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/COMETphase1.jpg)
 
 The individual Proton On Target (POT) events from SimG4 simulation is combines by using SimHitMerger package to form bunch-like timing structure. The bunch-like events are created by shifting the timing of each of the 1.6 × 107 POT events in the bunch by random value in range from -50 ns to 50 ns and combining the results. The pulsed beam is simulated using a handful of bunch-events, where each is separated by 1170 ns to form "bunch-train" events. The steps of ICEDUST simulation. Starting the simulation from the beginning is very time consuming. Due to this reason, the initial step in calibration study is to find a way to minimize the simulation duration. This can be done by skimming the negative charge pion which is the parent particle form PPC process.
 
 ## Momentum Calibration Study Work Flow
 
-![]()
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/WorkFlow.png)
 
 The work flow in this study is to skim the pion to produce input of the simulation,
 running the simulation for current configuration. After that the simulation is rerun by
@@ -53,7 +59,7 @@ extracted data from each simulation output.
 
 The interest process in the calibration study is pion capture process specifically Pionic Pion Capture (PPC). Realistically, some of the pion that does not decay to muon in transport solenoid will enter the CyDet. This pion will be captured by the nucleus in the stopping target. The captured pion will interact with the proton from the nucleus. This interaction will produce pion neutral and neutron. The pion neutron will later decay into two photons and these photons produce electron-positron pair. Finally, using the electron-positron pair momentum distribution for the calibration. 
 
-![]()
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/ppc.png)
 
 ### Data Samples
 
