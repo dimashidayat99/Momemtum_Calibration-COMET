@@ -13,7 +13,6 @@ Lepton Flavor Violation (CLFV) process which is shown in figure below.
 The existence of a more complete theoretical models than the SM known as New Physics (NP) that may explain and predict some physical phenomena such as neutrino oscillation and CLFV. Originally, CLFV is not allowed in SM, however, with existance of neutrino oscillation, CLFV may occur but in extremely low probability or branching ratio which is around order of -54. Therefore, searching for CLFV process signal may give us a hint of the physics beyond the SM and some NP models may be considered as extension of the SM. The CLFV process in muonic channel have been search since the discovery of muon and still continue until now. 
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/COMET%20LOGO.png" width="150" />
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_layout.png" width ="450" /> 
 </p>
 
