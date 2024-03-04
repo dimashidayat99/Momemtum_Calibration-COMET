@@ -97,7 +97,7 @@ The low statistics from simulation before must be improve in order to reduce the
 
 <p align="middle">
   <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polyethylene_conf.png" width="300" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polypropylene_conf.png" width="300" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polypropylene_conf.png" /> 
 </p>
 
 <p align="middle">
@@ -130,7 +130,7 @@ In this study, the analysis was done only at truth level which refer to real phy
 
 ![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h2_gamma_decayvtx_rz.png)
 
-In figure above, there is no number of vertex is shown. Therefore, to observe how many vertex is produce at particular transverse distance from z-axis, the distribution of number of vertex against the transverse distance from z-axis is plotted as shown in figure below. Using this figure, the number of pair production vertex produced in CyDet can be estimated. By looking to the distribution of vertex in Figure 4.3, Most of the pair production vertex is produced outside the CDC radius while around 25% of the pair production vertex is produced inside the CDC radius (Noted that the CDC radius is at around 835 mm to 496 mm from the z-axis). From this observation, it simply said that only around 25% of total of the pair production vertex can be detected because only around 25% vertex that produced inside the CDC radius will leave the hits in CDC. The position of pair production vertex is important in this study to know if the pair production from PPC process is detectable or not. Although most of the pair production vertex is outside the CDC radius, the pair production from PPC process is still visible and detectable by the CDC. Imagine if all of the pair production is produced outside the CDC radius, there will be no signal is produced for this process and there is no point to continue this study if this (vertex production is outside CDC radius) is happening.
+In figure above, there is no number of vertex is shown. Therefore, to observe how many vertex is produce at particular transverse distance from z-axis, the distribution of number of vertex against the transverse distance from z-axis is plotted as shown in figure below. Using this figure, the number of pair production vertex produced in CyDet can be estimated. By looking to the distribution of vertex in figure below, Most of the pair production vertex is produced outside the CDC radius while around 25% of the pair production vertex is produced inside the CDC radius (Noted that the CDC radius is at around 835 mm to 496 mm from the z-axis). From this observation, it simply said that only around 25% of total of the pair production vertex can be detected because only around 25% vertex that produced inside the CDC radius will leave the hits in CDC. The position of pair production vertex is important in this study to know if the pair production from PPC process is detectable or not. Although most of the pair production vertex is outside the CDC radius, the pair production from PPC process is still visible and detectable by the CDC. Imagine if all of the pair production is produced outside the CDC radius, there will be no signal is produced for this process and there is no point to continue this study if this (vertex production is outside CDC radius) is happening.
 
 ![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h_gamma_decayvtx_r.png)
 
@@ -138,54 +138,16 @@ In figure above, there is no number of vertex is shown. Therefore, to observe ho
 
 From the simulation result for current configuration, some analysis and event estimation for the calibration run can be calculated. In phase-I, the COMET experiment is expected to run for 146 days which equivalent to $1.26 × 10^7$ second and expected to have total POT of $3.2 × 10^19$. From this information, the rate of POT per second is given by
 
-$$ Rate_{POT} = \frac{3.2 \times 10^19}{1.26 \times 10^7 } \approx 2.5397 \times 10^12 POT s^{-1}$$
+$$ Rate_{POT} = \frac{3.2 \times 10^{19}}{1.26 \times 10^7 } \approx 2.5397 \times 10^{12} POT s^{-1}$$
 
-From Table 4.1, the number of pair production from PPC process with respect to POT
-is 1.2 × 10−8 per second. From this value, the rate of the pair production is given by rate of POT times the number of pair production with respect to POT
+From result of [default](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/default_conf.png) configuration event count, the number of pair production from PPC process with respect to POT is $1.2 × 10^{−8}$ per second. From this value, the rate of the pair production is given by rate of POT times the number of pair production with respect to POT
 
-... Equation
+$$ Rate_{e^{+}e^{-}} = (2.5397 \times 10^{12})(1.2 \times 10^{-8}) = 30476 Pairs^{-1}$$
 
-The rate of pair production from PPC process was calculated to be 30476 per second.
-The 30476 pair production per second will tell us on how long the beam and the detector
-should be run for calibration run. The idea is to run beam and detector until the statistical
-uncertainty is greatly reduce. As known, the more the statistics, the less the uncertainty.
-From the momentum distribution at Figure 4.1 which have number of events of 21178, I
-will say that around 20000 and above specifically around 50000 is good enough to reduce
-the uncertainty. But this assumption is still early to make. The rate of pair production of
-30476 is actually quite high for COMET experiment because of COMET experiment is
-design to suppressed the background events until the very small number of background
-events is expected to observed. The high number of rate of pair production is because
-of the calculation is naive estimation that based on many assumption such as not taking
-account the acceptance. For more complex analysis the acceptance and efficiency must
-be included in the analysis. The event estimation for calibration run require advanced
-understanding on the detector and more strategy increase the samples for the calibration
-run.
+The rate of pair production from PPC process was calculated to be 30476 per second. The 30476 pair production per second will tell us on how long the beam and the detector should be run for calibration run. The idea is to run beam and detector until the statistical uncertainty is greatly reduce. As known, the more the statistics, the less the uncertainty. From the momentum distribution for [electron](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_electron_mom.png) and [positron](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_positron_mom.png) which have number of events of 21178 of pair productions, I will say that around 20000 and above specifically around 50000 is good enough to reduce the uncertainty. But this assumption is still early to make. The rate of pair production of 30476 is actually quite high for COMET experiment because of COMET experiment is design to suppressed the background events until the very small number of background events is expected to observed. The high number of rate of pair production is because of the calculation is naive estimation that based on many assumption such as not taking account the acceptance. For more complex analysis the acceptance and efficiency must be included in the analysis. The event estimation for calibration run require advanced understanding on the detector and more strategy increase the samples for the calibration run.
 
 # Summary
 
-The momentum calibration study in COMET experiment has been performed until the
-estimation of vertex of pair production position of PPC process in CyDet for simulation
-analysis and events estimation of pair production of PPC process for the calibration run for
-given current cpnfiguration. Although, there is no momentum calibration is done in this
-study, some of the objective of this study is achieved by successfully observed the visibility
-of PPC process in the CDC in CyDet. The calibration study require more complex analysis
-to become realistic enough to ensure the momentum calibration can be done in calibration
-run before the data taking of the COMET phase-I run. My suggestion for the future study is
-to put some thin layer material inside the CDC radius around 200 mm from z-axis as shown
-in Figure 5.1. It is because in principle, the photon must be near to a nucleus in order for
-photon conversion process to occur because of the conservation of the momentum and
-energy is satisfy. The photon conversion cannot occur in free space because of momentum
-and energy conservation cannot be satisfy. By putting some cylindrical material inside
-CDC radius, the probability of photon conversion will be increase and produce significant
-samples of pair production from PPC process. For the calibration run, the analysis of
-the event estimation of PPC process must include the acceptance and efficiency. My
-suggestion for calibration run is not to use the momentum cut (momentum window) only for
-calibration run. From the momentum distribution that is shown in Figure 4.1, the number
-of electron that have momentum near 100 MeV/c is very low. Based on the average, most
-of the electron have momentum around 40 to 60 MeV/c. Therefore, to make observable
-event, the momentum window of 103.6 MeV/c < 푝푒 < 106.0 MeV/c should not be used
-in the calibration run. More advanced approaches may be implemented to improve the
-studies by a higher extend since the current study is only at truth level. More research and
-improvisations are required in the momentum calibration study.
+The momentum calibration study in COMET experiment has been performed until the estimation of vertex of pair production position of PPC process in CyDet for simulation analysis and events estimation of pair production of PPC process for the calibration run for given current cpnfiguration. Although, there is no momentum calibration is done in this study, some of the objective of this study is achieved by successfully observed the visibility of PPC process in the CDC in CyDet. The calibration study require more complex analysis to become realistic enough to ensure the momentum calibration can be done in calibration run before the data taking of the COMET phase-I run. My suggestion for the future study is to put some thin layer material inside the CDC radius around 200 mm from z-axis as shown in figure below as denoted as red dotted line. It is because in principle, the photon must be near to a nucleus in order for photon conversion process to occur because of the conservation of the momentum and energy is satisfy. The photon conversion cannot occur in free space because of momentum and energy conservation cannot be satisfy. By putting some cylindrical material inside CDC radius, the probability of photon conversion will be increase and produce significant samples of pair production from PPC process. For the calibration run, the analysis of the event estimation of PPC process must include the acceptance and efficiency. My suggestion for calibration run is not to use the momentum cut (momentum window) only for calibration run. From the momentum distribution for[electron](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_electron_mom.png) and [positron](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_positron_mom.png) that is shown above, the number of electron that have momentum near 100 MeV/c is very low. Based on the average, most of the electron have momentum around 40 to 60 MeV/c. Therefore, to make observable event, the momentum window of 103.6 MeV/c < $P_e$ < 106.0 MeV/c should not be used in the calibration run. More advanced approaches may be implemented to improve the studies by a higher extend since the current study is only at truth level. More research and improvisations are required in the momentum calibration study.
 
-![]()
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/suggestion.png)
