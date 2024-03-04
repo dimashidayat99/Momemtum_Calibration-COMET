@@ -138,7 +138,7 @@ In figure above, there is no number of vertex is shown. Therefore, to observe ho
 
 From the simulation result for current configuration, some analysis and event estimation for the calibration run can be calculated. In phase-I, the COMET experiment is expected to run for 146 days which equivalent to $1.26 × 10^7$ second and expected to have total POT of $3.2 × 10^19$. From this information, the rate of POT per second is given by
 
-$$ Rate_{POT} = (3.2 \times 10^19)/(1.26 \times 10^7 ) \approx 2.5397 \times 10^12 POT s^(-1)$$
+$$ Rate_{POT} = \frac{3.2 \times 10^19}{1.26 \times 10^7 } \approx 2.5397 \times 10^12 POT s^{-1}$$
 
 From Table 4.1, the number of pair production from PPC process with respect to POT
 is 1.2 × 10−8 per second. From this value, the rate of the pair production is given by rate of POT times the number of pair production with respect to POT
