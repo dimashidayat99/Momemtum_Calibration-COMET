@@ -63,8 +63,7 @@ The work is start from building ICEDUST on the DICC HPC Cluster or known as UMHP
 
 #### Pion Skimming
 
-The Geant4 based simulation read the oaRooTracker as input to continue the simulation and this simulation will give five output files which are log file, mac file, root file, dat file and rootracker file. The output files that is important in this study is root file and rootracker file, while the rest of files is not being used in this study. The oaRootracker files is classify into two types which are MC5A01 and MC5A02. The MC5A01 and MC5A02 is just oaRooTracker that contain particles before entering CyDet and after entering CyDet, respectively. This study is to used MC5A01 oaRooTracker to run the simulation. Since there are a lot of oaRooTracker files from MC5A01, the 100 oaRooTracker files was merge into 1 merged oaRooTracker file and there are total of 200 merged oaRooTracker files. The combination of oaRooTracker code can be seen in the `CyDetMomCalib
-/MakeRooTrackHist/` [directory](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/tree/main/CyDetMomCalib/MakeRooTrackHist). Running the simulation with 200 merged oaRooTracker will be very time consuming. To run 1 unmerged oaRooTracker usually take about 1 days to complete. The long duration of the simulation is because of the simulation will run for all particles contain in the oaRooTracker. Due to the simulation is very time consuming, the duration of the simulation is reduced by removing all non related particle that is not important in this study. Since the PPC process is the interests process in this study, the pion (negative charge pion) is the only important parent particle. Therefore, every oaRooTracker will be filtered or skimmed to remove all the particles except for pion. The code for performing this skim can be found in `CyDetMomCalib/AnaRootracker` [directory](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/tree/main/CyDetMomCalib/AnaRootracker). Using this method, simulation was made to be more efficient. Now, there are total of 200 skimmed pion oaRooTracker that will be used as input in the simulation. The simulation was run using 200 skimmed pion oaRooTracker as input by using the original (current) configuration of the COMET experiment.
+The Geant4 based simulation read the oaRooTracker as input to continue the simulation and this simulation will give five output files which are log file, mac file, root file, dat file and rootracker file. The output files that is important in this study is root file and rootracker file, while the rest of files is not being used in this study. The oaRootracker files is classify into two types which are MC5A01 and MC5A02. The MC5A01 and MC5A02 is just oaRooTracker that contain particles before entering CyDet and after entering CyDet, respectively. This study is to used MC5A01 oaRooTracker to run the simulation. Since there are a lot of oaRooTracker files from MC5A01, the 100 oaRooTracker files was merge into 1 merged oaRooTracker file and there are total of 200 merged oaRooTracker files. The combination of oaRooTracker code can be seen in the `CyDetMomCalib/MakeRooTrackHist/` [directory](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/tree/main/CyDetMomCalib/MakeRooTrackHist). Running the simulation with 200 merged oaRooTracker will be very time consuming. To run 1 unmerged oaRooTracker usually take about 1 days to complete. The long duration of the simulation is because of the simulation will run for all particles contain in the oaRooTracker. Due to the simulation is very time consuming, the duration of the simulation is reduced by removing all non related particle that is not important in this study. Since the PPC process is the interests process in this study, the pion (negative charge pion) is the only important parent particle. Therefore, every oaRooTracker will be filtered or skimmed to remove all the particles except for pion. The code for performing this skim can be found in `CyDetMomCalib/AnaRootracker` [directory](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/tree/main/CyDetMomCalib/AnaRootracker). Using this method, simulation was made to be more efficient. Now, there are total of 200 skimmed pion oaRooTracker that will be used as input in the simulation. The simulation was run using 200 skimmed pion oaRooTracker as input by using the original (current) configuration of the COMET experiment.
 
 ### Modifying the Experiment Configuration
 
@@ -84,102 +83,60 @@ The simulation of this study is based on the PPC process flow as discussed befor
 
 # Result
 
-## Default Configuration
-
 There are total 7 simulations were run in this study: 1 simulation was done by using default configuration, 4 simulation were done by using hydrocarbon target configuration and two simulation were done by using pion gun configuration. The output of the 7 simulations then was extracted for the number of event of involving particle in PPC process, momentum and vertex position distribution for pair production was created.
 
+## Default Configuration
 
-For given current configuration of the COMET experiment, from 990678399 POT, there
-are only 12 electron-positron pair that is produced from PPC process as shown in Table 4.1.
-As expected, the pair production from PPC process is suppressed by the design of COMET
-experiment itself. This is because the electron pair production from PPC process is also
-one of the background event that is related with the pion capture process. To perform
-the momentum calibration, the distribution of momentum for electron and positron pair
-from PPC process is needed. With only 12 events, the distribution of momentum will be imperfect and have high statistical error. Some strategy is needed to increase the statistics
-of pair production.
+For given current configuration of the COMET experiment, from 990678399 POT, there are only 12 electron-positron pair that is produced from PPC process. As expected, the pair production from PPC process is suppressed by the design of COMET experiment itself. This is because the electron pair production from PPC process is also one of the background event that is related with the pion capture process. To perform the momentum calibration, the distribution of momentum for electron and positron pair from PPC process is needed. With only 12 events, the distribution of momentum will be imperfect and have high statistical error. Some strategy is needed to increase the statistics of pair production.
+
+![](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/default_conf.png)
 
 ## Hydrocarbon Target Configuration
 
-The low statistics from simulation before must be improve in order to reduce the
-statistical uncertainty when generating the momentum distribution. The strategy that is
-used for this study to increase the statistics of pair production from PPC process is to change
-muon stopping target material from aluminium to the hydrocarbon based material. In
-principle, the PPC process require interaction of pion and proton to occur. Therefore, more
-pions will interact with proton if there are more number of proton of the stopping target. For
-this reason, the material with rich proton number will be used. Therefore, the hydrocarbon
-material is chosen in this study. The chosen hydrocarbon material must be available
-in the ICEDUST package, the available material chosen is polystyrene, polyethylene,
-polypropylene and polyvinyl toluene
+The low statistics from simulation before must be improve in order to reduce the statistical uncertainty when generating the momentum distribution. The strategy that is used for this study to increase the statistics of pair production from PPC process is to change muon stopping target material from aluminium to the hydrocarbon based material. In principle, the PPC process require interaction of pion and proton to occur. Therefore, more pions will interact with proton if there are more number of proton of the stopping target. For this reason, the material with rich proton number will be used. Therefore, the hydrocarbon material is chosen in this study. The chosen hydrocarbon material must be available in the ICEDUST package, the available material chosen is polystyrene, polyethylene, polypropylene and polyvinyl toluene.
 
+<p align="middle">
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polyethylene_conf.png" width="300" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polypropylene_conf.png" width="300" /> 
+</p>
 
-Compared with all the hydrocarbon based material target, I found that the highest
-number of pair production from PPC process is 85 events by using polyethylene material
-target. The statistics is increase by factor of 7 from 12 events for aluminium target to 85
-events for polyethylene target. The reason why polyethylene target produce highest number
-of events compared to other hydrocarbon material such as polystyrene, polypropylene and
-polyvinyl toluene is not fully understand yet and require more time for understanding about
-the molecular structure of hydrocarbon material. However, the 85 pair production also not
-enough to produce good momentum distribution, so that another strategy must be used to
-increase the statistics.
+<p align="middle">
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polystyrene_conf.png" width="300" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/polyvinyltoluene_conf.png" width="300" /> 
+</p>
+
+Compared with all the hydrocarbon based material target, It was found that the highest number of pair production from PPC process is 85 events by using polyethylene material target. The statistics is increase by factor of 7 from 12 events for aluminium target to 85 events for polyethylene target. The reason why polyethylene target produce highest number of events compared to other hydrocarbon material such as polystyrene, polypropylene and polyvinyl toluene is not fully understand yet and require more time for understanding about the molecular structure of hydrocarbon material. However, the 85 pair production also not enough to produce good momentum distribution, so that another strategy must be used to increase the statistics.
 
 ## Pion Gun Configuration
 
-The momentum calibration study utilize the pion gun configuration (negatively charge
-pion gun) to increase the statistics. The pion gun was used to fire the pion directly to the
-material target in CyDet. Using this technique, the number of pions that initiate the PPC
-process will increase. Obviously, the pion gun configuration will produce significantly
-more pair production compare to the original configuration of the experiment, where the
-pion is produced by bombarding the proton to the pion production target.
+The momentum calibration study utilize the pion gun configuration (negatively charge pion gun) to increase the statistics. The pion gun was used to fire the pion directly to the material target in CyDet. Using this technique, the number of pions that initiate the PPC process will increase. Obviously, the pion gun configuration will produce significantly more pair production compare to the original configuration of the experiment, where the pion is produced by bombarding the proton to the pion production target.
 
-By using pion gun configuration, the pair production from PPC process is increase
-drastically by factor of 511, from 12 events to 6127 events for
-aluminium target. While the using polyethylene, the pair production from PPC process
-is also increase drastically by factor of 2484, from 85 events to 21178 events. Due to the sufficiently high of number of samples, the momentum distributions
-for the pair production were created
+<p align="middle">
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/pigun_default_conf.png" width="300" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/event_count/pigun_polyethylene_conf.png" width="300" /> 
+</p>
+
+By using pion gun configuration, the pair production from PPC process is increase drastically by factor of 511, from 12 events to 6127 events for aluminium target (left figure). While the using polyethylene, the pair production from PPC process is also increase drastically by factor of 2484, from 85 events to 21178 events (right figure). Due to the sufficiently high of number of samples, the momentum distributions for the pair production were created.
+
+![Positron Momentum](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/assets/69446089/44fdd98e-f85e-4328-a06d-97a74fe90bee)
+
+![Electron Momentum](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/assets/69446089/aad7820c-fe3a-4bed-b369-5d109ec3baef)
+
+
 
 ## Vertex Position of Pair Production
 
-In this study, the analysis was done only at truth level which refer to real physics
-simulation and not realistic compared to the SimDetectorResponse. Therefore, momentum
-distribution of pair production does not show where exactly the electron and positron pair
-is produced in CyDet. Therefore, the vertex of the pair production was plotted by using
-electron-positron pair initial position with implemented the main algorithm as mention in
-chapter 3. The initial position of electron-positron pair (vertex) was plotted for transverse
-distance from z-axis at the z coordinate. The diagram of schematic layout of CDC in
-Figure 2.13 with the vertex position as shown Figure 4.2. I found that the CDC is denoted
-by rectangular shape that is located at 496 mm to 835 mm of transverse distance from
-z-axis while the radius of the CDC is in between 835 mm to 496 mm. In order for electron
-and positron leave the hits in CDC, the vertex must be produced inside the CDC radius
-which optimally at 200 mm to 400 mm. If the vertex is produced inside the CDC radius,
-the electron and positron will move toward the CDC resulting in increasing probability of
-electron and positron leave the hits in CDC. If the vertex is produced outside the CDC radius, the electron and positron will move far from CDC and never leave the hits in the
-CDC.
+In this study, the analysis was done only at truth level which refer to real physics simulation and not realistic compared to the SimDetectorResponse. Therefore, momentum distribution of pair production does not show where exactly the electron and positron pair is produced in CyDet. Therefore, the vertex of the pair production was plotted by using electron-positron pair initial position with implemented the main algorithm. The initial position of electron-positron pair (vertex) was plotted for transverse distance from z-axis at the z coordinate. The diagram of schematic layout of CDC in Figure 2.13 with the vertex position as shown Figure 4.2. I found that the CDC is denoted by rectangular shape that is located at 496 mm to 835 mm of transverse distance from z-axis while the radius of the CDC is in between 835 mm to 496 mm. In order for electron and positron leave the hits in CDC, the vertex must be produced inside the CDC radius which optimally at 200 mm to 400 mm. If the vertex is produced inside the CDC radius, the electron and positron will move toward the CDC resulting in increasing probability of electron and positron leave the hits in CDC. If the vertex is produced outside the CDC radius, the electron and positron will move far from CDC and never leave the hits in the CDC.
 
 ![]()
 
-In Figure 4.2, there is no number of vertex is shown. Therefore, to observe how many
-vertex is produce at particular transverse distance from z-axis, the distribution of number of
-vertex against the transverse distance from z-axis is plotted as shown in Figure 4.3. Using
-this figure, the number of pair production vertex produced in CyDet can be estimated.
-By looking to the distribution of vertex in Figure 4.3, Most of the pair production vertex
-is produced outside the CDC radius while around 25% of the pair production vertex is
-produced inside the CDC radius (Noted that the CDC radius is at around 835 mm to 496
-mm from the z-axis). From this observation, it simply said that only around 25% of total of
-the pair production vertex can be detected because only around 25% vertex that produced
-inside the CDC radius will leave the hits in CDC. The position of pair production vertex
-is important in this study to know if the pair production from PPC process is detectable
-or not. Although most of the pair production vertex is outside the CDC radius, the pair production from PPC process is still visible and detectable by the CDC. Imagine if all of
-the pair production is produced outside the CDC radius, there will be no signal is produced
-for this process and there is no point to continue this study if this (vertex production is
-outside CDC radius) is happening.
+In Figure 4.2, there is no number of vertex is shown. Therefore, to observe how many vertex is produce at particular transverse distance from z-axis, the distribution of number of vertex against the transverse distance from z-axis is plotted as shown in Figure 4.3. Using this figure, the number of pair production vertex produced in CyDet can be estimated. By looking to the distribution of vertex in Figure 4.3, Most of the pair production vertex is produced outside the CDC radius while around 25% of the pair production vertex is produced inside the CDC radius (Noted that the CDC radius is at around 835 mm to 496 mm from the z-axis). From this observation, it simply said that only around 25% of total of the pair production vertex can be detected because only around 25% vertex that produced inside the CDC radius will leave the hits in CDC. The position of pair production vertex is important in this study to know if the pair production from PPC process is detectable or not. Although most of the pair production vertex is outside the CDC radius, the pair production from PPC process is still visible and detectable by the CDC. Imagine if all of the pair production is produced outside the CDC radius, there will be no signal is produced for this process and there is no point to continue this study if this (vertex production is outside CDC radius) is happening.
 
 ![]
 
 ## Event Estimation for Calibration Run of COMMET Experiment for Currrent Configuration
 
-From the simulation result for current configuration, some analysis and event estimation
-for the calibration run can be calculated. In phase-I, the COMET experiment is expected
-to run for 146 days which equivalent to 1.26 × 107
+From the simulation result for current configuration, some analysis and event estimation for the calibration run can be calculated. In phase-I, the COMET experiment is expected to run for 146 days which equivalent to 1.26 × 107
 second and expected to have total POT
 of 3.2 × 1019. From this information, the rate of POT per second is given by
 
