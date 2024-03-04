@@ -2,7 +2,7 @@
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/sm.png"  width="800" />
 </p>
-<p>
+<p align="middle">
     <em>Standard model of particle physics. [Source figure]</em>
 </p>
 
