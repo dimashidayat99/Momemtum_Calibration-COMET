@@ -1,19 +1,19 @@
 # Introduction
 <p align="middle">
-<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/sm.png"  width="400" />
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/sm.png"  width="800" />
 </p>
 
 The Standard Model (SM) of particle physics is excellent theory that explain the basic building blocks of the universe. It explains how the quarks and leptons build all known matter. In addition, it describes how three of four known fundamental forces (electromagnetic force, strong force and weak force and except for gravity) work by exchange of force-carrier particles known as boson. The biggest success of the SM is the prediction of Higgs boson which then experimentally observed at Large Hadron Collider in 2012. The Higgs boson is the last particle predicted in SM meaning there is no other particle is predicted by SM in the future. For a decade, through many experiment the SM become establish as a well-tested physics theory. However, the SM still far be considered as a complete model since it unable to solve some problems in particle physics such as hierarchy problem between the Planck scale of gravity and electroweak scale, the quantization of gravity, fine tuning of certain SM parameter and more. Other than that, SM also unable to predict some physical phenomena in particle physics such as neutrino oscillation which resulting in Lepton Flavor Violation (LFV) that can induce Charged
 Lepton Flavor Violation (CLFV) process which is shown in figure below.
 
 <p align="middle">
-<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/CLFVprocess.jpg"  width="400"/>
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/CLFVprocess.jpg"  width="800"/>
 </p>
 
 The existence of a more complete theoretical models than the SM known as New Physics (NP) that may explain and predict some physical phenomena such as neutrino oscillation and CLFV. Originally, CLFV is not allowed in SM, however, with existance of neutrino oscillation, CLFV may occur but in extremely low probability or branching ratio which is around order of -54. Therefore, searching for CLFV process signal may give us a hint of the physics beyond the SM and some NP models may be considered as extension of the SM. The CLFV process in muonic channel have been search since the discovery of muon and still continue until now. 
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_layout.png" width ="450" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_layout.png" width ="800" /> 
 </p>
 
 The COMET experiment is the one of the future experiment that seek for CLFV process in muonic channel of neutrino-less muon to electron conversion. Due to the rarity of CLFV process to occur, the COMET must be designed to suppressed all the possible background to get accurate data. The accuracy of the data can be increase by calibrating the detector before taking the data, this can help to reduce the uncertainty by reducing the error that may come from various source such as detector error. The objective of this study is to study pion capture process for the momentum calibration by observing the detectability of pion capture process in the detector in COMET experiment. It is crucial to check the detectability of the interest process to know if this process is possible to be used for calibration. If pion capture process is detectable, the study will continue to the calibration measurement. In addition, the study also need to estimate and analyse the pion capture process for the calibration run.
@@ -48,7 +48,7 @@ In the ICEDUST framework, there is a host of simulation packages known as Monte 
 The simulation begins with the propagation of 8 GeV protons beam which produce proton through proton beam line that feeds COMET experiment by using the TURTLE software framework. The results of this simulation are sampled just as the protons enter the Pion Production section and saved in an oaRooTracker file.This simulation has been done by the collaboration. For calibration study, the Geant 4 based simulation is run where the oaRooTracker file is used as input for the simulation. The SimG4 read the description from the oaRooTracker files to continue the simulation. The simulation is done in full by Geant4 through the Muon Transport section and into the detector section. The hits produced in SimG4 describe the time and magnitude of all energy deposits in the detectors. They are referred to as "truth" hits.
 
 <p align="middle">
-<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_simulation.png"  width="400"/>
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_simulation.png"  width="500"/>
 </p>
 
 The individual Proton On Target (POT) events from SimG4 simulation is combines by using SimHitMerger package to form bunch-like timing structure. The bunch-like events are created by shifting the timing of each of the 1.6 × 107 POT events in the bunch by random value in range from -50 ns to 50 ns and combining the results. The pulsed beam is simulated using a handful of bunch-events, where each is separated by 1170 ns to form "bunch-train" events. The steps of ICEDUST simulation. Starting the simulation from the beginning is very time consuming. Due to this reason, the initial step in calibration study is to find a way to minimize the simulation duration. This can be done by skimming the negative charge pion which is the parent particle form PPC process.
@@ -67,7 +67,7 @@ extracted data from each simulation output.
 The interest process in the calibration study is pion capture process specifically Pionic Pion Capture (PPC). Realistically, some of the pion that does not decay to muon in transport solenoid will enter the CyDet. This pion will be captured by the nucleus in the stopping target. The captured pion will interact with the proton from the nucleus. This interaction will produce pion neutral and neutron. The pion neutron will later decay into two photons and these photons produce electron-positron pair. Finally, using the electron-positron pair momentum distribution for the calibration. 
 
 <p align="middle">
-<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/ppc.png"  width="400"/>
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/ppc.png"  width="500"/>
 </p>
 
 ### Data Samples
@@ -106,7 +106,7 @@ There are total 7 simulations were run in this study: 1 simulation was done by u
 For given current configuration of the COMET experiment, from 990678399 POT, there are only 12 electron-positron pair that is produced from PPC process. As expected, the pair production from PPC process is suppressed by the design of COMET experiment itself. This is because the electron pair production from PPC process is also one of the background event that is related with the pion capture process. To perform the momentum calibration, the distribution of momentum for electron and positron pair from PPC process is needed. With only 12 events, the distribution of momentum will be imperfect and have high statistical error. Some strategy is needed to increase the statistics of pair production.
 
 <p align="middle">
-<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png"  width="400"/>
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png"  width="500"/>
 </p>
 
 ## Hydrocarbon Target Configuration
@@ -114,13 +114,13 @@ For given current configuration of the COMET experiment, from 990678399 POT, the
 The low statistics from simulation before must be improve in order to reduce the statistical uncertainty when generating the momentum distribution. The strategy that is used for this study to increase the statistics of pair production from PPC process is to change muon stopping target material from aluminium to the hydrocarbon based material. In principle, the PPC process require interaction of pion and proton to occur. Therefore, more pions will interact with proton if there are more number of proton of the stopping target. For this reason, the material with rich proton number will be used. Therefore, the hydrocarbon material is chosen in this study. The chosen hydrocarbon material must be available in the ICEDUST package, the available material chosen is polystyrene, polyethylene, polypropylene and polyvinyl toluene.
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyethylene_conf.png" width="400" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polypropylene_conf.png" width ="400" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyethylene_conf.png" width="500" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polypropylene_conf.png" width ="500" /> 
 </p>
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polystyrene_conf.png" width="400" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyvinyltoluene_conf.png" width="400" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polystyrene_conf.png" width="500" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyvinyltoluene_conf.png" width="500" /> 
 </p>
 
 Compared with all the hydrocarbon based material target, It was found that the highest number of pair production from PPC process is 85 events by using polyethylene material target. The statistics is increase by factor of 7 from 12 events for [aluminium](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/default_conf.png) target to 85 events for [polyethylene](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/polyethylene_conf.png) target. The reason why polyethylene target produce highest number of events compared to other hydrocarbon material such as polystyrene, polypropylene and polyvinyl toluene is not fully understand yet and require more time for understanding about the molecular structure of hydrocarbon material. However, the 85 pair production also not enough to produce good momentum distribution, so that another strategy must be used to increase the statistics.
@@ -130,15 +130,15 @@ Compared with all the hydrocarbon based material target, It was found that the h
 The momentum calibration study utilize the pion gun configuration (negatively charge pion gun) to increase the statistics. The pion gun was used to fire the pion directly to the material target in CyDet. Using this technique, the number of pions that initiate the PPC process will increase. Obviously, the pion gun configuration will produce significantly more pair production compare to the original configuration of the experiment, where the pion is produced by bombarding the proton to the pion production target.
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_default_conf.png" width="400" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_polyethylene_conf.png" width="400" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_default_conf.png" width="500" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/ppc_event_count/pigun_polyethylene_conf.png" width="500" /> 
 </p>
 
 By using pion gun configuration, the pair production from PPC process is increase drastically by factor of 511, from 12 events to 6127 events for aluminium target (left figure). While the using polyethylene, the pair production from PPC process is also increase drastically by factor of 2484, from 85 events to 21178 events (right figure). Due to the sufficiently high of number of samples, the momentum distributions for the pair production were created.
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_electron_mom.png" width="400" />
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_positron_mom.png" width="400" /> 
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_electron_mom.png" width="500" />
+  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_positron_mom.png" width="500" /> 
 </p>
 
 
@@ -147,13 +147,13 @@ By using pion gun configuration, the pair production from PPC process is increas
 In this study, the analysis was done only at truth level which refer to real physics simulation and not realistic compared to the SimDetectorResponse. Therefore, momentum distribution of pair production does not show where exactly the electron and positron pair is produced in CyDet. Therefore, the vertex of the pair production was plotted by using electron-positron pair initial position with implemented the main algorithm. The initial position of electron-positron pair (vertex) was plotted for transverse distance from z-axis at the z coordinate. The diagram of schematic layout of CDC with the vertex position as shown figure below. It was found that the CDC is denoted by rectangular shape that is located at 496 mm to 835 mm of transverse distance from z-axis while the radius of the CDC is in between 835 mm to 496 mm. In order for electron and positron leave the hits in CDC, the vertex must be produced inside the CDC radius which optimally at 200 mm to 400 mm. If the vertex is produced inside the CDC radius, the electron and positron will move toward the CDC resulting in increasing probability of electron and positron leave the hits in CDC. If the vertex is produced outside the CDC radius, the electron and positron will move far from CDC and never leave the hits in the CDC.
 
 <p align="middle">
-<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h2_gamma_decayvtx_rz.png" width="400" />
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h2_gamma_decayvtx_rz.png" width="600" />
 </p>
 
 In figure above, there is no number of vertex is shown. Therefore, to observe how many vertex is produce at particular transverse distance from z-axis, the distribution of number of vertex against the transverse distance from z-axis is plotted as shown in figure below. Using this figure, the number of pair production vertex produced in CyDet can be estimated. By looking to the distribution of vertex in figure below, Most of the pair production vertex is produced outside the CDC radius while around 25% of the pair production vertex is produced inside the CDC radius (Noted that the CDC radius is at around 835 mm to 496 mm from the z-axis). From this observation, it simply said that only around 25% of total of the pair production vertex can be detected because only around 25% vertex that produced inside the CDC radius will leave the hits in CDC. The position of pair production vertex is important in this study to know if the pair production from PPC process is detectable or not. Although most of the pair production vertex is outside the CDC radius, the pair production from PPC process is still visible and detectable by the CDC. Imagine if all of the pair production is produced outside the CDC radius, there will be no signal is produced for this process and there is no point to continue this study if this (vertex production is outside CDC radius) is happening.
 
 <p align="middle">
-<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h_gamma_decayvtx_r.png" width="400" />
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/h_gamma_decayvtx_r.png" width="600" />
 </p>
 
 ## Event Estimation for Calibration Run of COMMET Experiment for Currrent Configuration
@@ -173,5 +173,5 @@ The rate of pair production from PPC process was calculated to be 30476 per seco
 The momentum calibration study in COMET experiment has been performed until the estimation of vertex of pair production position of PPC process in CyDet for simulation analysis and events estimation of pair production of PPC process for the calibration run for given current cpnfiguration. Although, there is no momentum calibration is done in this study, some of the objective of this study is achieved by successfully observed the visibility of PPC process in the CDC in CyDet. The calibration study require more complex analysis to become realistic enough to ensure the momentum calibration can be done in calibration run before the data taking of the COMET phase-I run. My suggestion for the future study is to put some thin layer material inside the CDC radius around 200 mm from z-axis as shown in figure below as denoted as red dotted line. It is because in principle, the photon must be near to a nucleus in order for photon conversion process to occur because of the conservation of the momentum and energy is satisfy. The photon conversion cannot occur in free space because of momentum and energy conservation cannot be satisfy. By putting some cylindrical material inside CDC radius, the probability of photon conversion will be increase and produce significant samples of pair production from PPC process. For the calibration run, the analysis of the event estimation of PPC process must include the acceptance and efficiency. My suggestion for calibration run is not to use the momentum cut (momentum window) only for calibration run. From the momentum distribution for[electron](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_electron_mom.png) and [positron](https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/momentum_pair_distribution/h_twogamma_lead_positron_mom.png) that is shown above, the number of electron that have momentum near 100 MeV/c is very low. Based on the average, most of the electron have momentum around 40 to 60 MeV/c. Therefore, to make observable event, the momentum window of 103.6 MeV/c < $P_e$ < 106.0 MeV/c should not be used in the calibration run. More advanced approaches may be implemented to improve the studies by a higher extend since the current study is only at truth level. More research and improvisations are required in the momentum calibration study.
 
 <p align="middle">
-<img src ="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/suggestion.png" width="400" />
+<img src ="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/Results/vertex_position/suggestion.png" width="600" />
 </p>
