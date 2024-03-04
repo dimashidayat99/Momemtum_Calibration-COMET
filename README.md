@@ -13,12 +13,14 @@ Lepton Flavor Violation (CLFV) process which is shown in figure below.
 
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/CLFVprocess.jpg"  width="800"/>
+<a href = "https://www.semanticscholar.org/paper/Lepton-Flavour-Violation-Experiments-Cei-Nicol%C3%B3/7285364ec2e82b7b8c1275cd967f931807f1f1af/figure/0">Source Figure. </a>
 </p>
 
 The existence of a more complete theoretical models than the SM known as New Physics (NP) that may explain and predict some physical phenomena such as neutrino oscillation and CLFV. Originally, CLFV is not allowed in SM, however, with existance of neutrino oscillation, CLFV may occur but in extremely low probability or branching ratio which is around order of -54. Therefore, searching for CLFV process signal may give us a hint of the physics beyond the SM and some NP models may be considered as extension of the SM. The CLFV process in muonic channel have been search since the discovery of muon and still continue until now. 
 
 <p align="middle">
-  <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_layout.png" width ="800" /> 
+<img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_layout.png" width ="800" /> 
+<a href = "https://doi.org/10.1093/ptep/pts089">Source Figure. </a>
 </p>
 
 The COMET experiment is the one of the future experiment that seek for CLFV process in muonic channel of neutrino-less muon to electron conversion. Due to the rarity of CLFV process to occur, the COMET must be designed to suppressed all the possible background to get accurate data. The accuracy of the data can be increase by calibrating the detector before taking the data, this can help to reduce the uncertainty by reducing the error that may come from various source such as detector error. The objective of this study is to study pion capture process for the momentum calibration by observing the detectability of pion capture process in the detector in COMET experiment. It is crucial to check the detectability of the interest process to know if this process is possible to be used for calibration. If pion capture process is detectable, the study will continue to the calibration measurement. In addition, the study also need to estimate and analyse the pion capture process for the calibration run.
@@ -43,6 +45,7 @@ The word ICEDUST is stand for Integrated COMET Experiment Data User Software Too
 
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/ICEDUST%20Framework.png"  width="800"/>
+<a href = "http://hdl.handle.net/10044/1/45365">Source Figure. </a>
 </p>
 
 In the ICEDUST framework, there is a host of simulation packages known as Monte Carlo packages that have been incorporated into ICEDUST. These include PHITS, MARS, Fluka and Geant4 which handle the simulations of hadronic physics inside the Pion Production Target. The usual simulation chain that produce Monte Carlo data can be done by simple step. Firstly, simulate the production target. This can be done apart so that the package of different hadron production models can be used. Secondly, the particle tracking. The details of the resulting particles flux out of the pion Production Target are read into a data format which is defined by oaRooTracker package. The Geant4 plays important role here, where the SimG4 package which is the Geant4-based particle tracking will read the data and track the particles from the Pion Production Target to the detectors and creates simulated energy deposits. Then, data from many events was combined into one event by using the SimHitMerger. Finally, The Rare process selection. To study the rare process or background signal since they are rare, the SimHitMerger is used to merge hits from rare process together to artificially increase the statistics.
@@ -54,6 +57,7 @@ The simulation begins with the propagation of 8 GeV protons beam which produce p
 
 <p align="middle">
 <img src="https://github.com/dimashidayat99/Momemtum_Calibration-COMET/blob/main/image/comet_simulation.png"  width="500"/>
+<a href = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mdpi.com%2F2218-1997%2F8%2F4%2F196&psig=AOvVaw242Qk7AtjGSU93NqTUIJ3Y&ust=1709638846393000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjAwZLD2oQDFQAAAAAdAAAAABAF">Source Figure. </a>
 </p>
 
 The individual Proton On Target (POT) events from SimG4 simulation is combines by using SimHitMerger package to form bunch-like timing structure. The bunch-like events are created by shifting the timing of each of the 1.6 × 107 POT events in the bunch by random value in range from -50 ns to 50 ns and combining the results. The pulsed beam is simulated using a handful of bunch-events, where each is separated by 1170 ns to form "bunch-train" events. The steps of ICEDUST simulation. Starting the simulation from the beginning is very time consuming. Due to this reason, the initial step in calibration study is to find a way to minimize the simulation duration. This can be done by skimming the negative charge pion which is the parent particle form PPC process.
